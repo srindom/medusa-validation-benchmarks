@@ -4,6 +4,13 @@
 
 We are considering moving away from Joi for validation of request bodies on our API endpoints. In the process we are evaluating `class-validator` as an alternative; this project aims to uncover performance differences between the two approaches.
 
+## Running the benchmarking test
+```
+git clone https://github.com/srindom/medusa-validation-benchmarks.git
+cd medusa-validation-benchmarks
+yarn && yarn benchmark
+```
+
 ## Input
 
 100000 dummy request payloads for Order Filters have been generated. The project runs validation on all of them in sequence using Joi's `validate` function and class-validator's `validateSync` function.
