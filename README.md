@@ -12,7 +12,7 @@ The timing was performed over 10 runs and the results show the average time for 
 
 ## Result
 
-Tested on a MacBook Air (M1, 2020)
+### Tested on a MacBook Air (M1, 2020)
 
 - **class-validator + class-transformer**: takes on avg 1115.3
 - **Joi validation**: takes on avg 1369.9
@@ -24,6 +24,20 @@ $ ts-node ./src/benchmark.ts
 class-validator avg: 1115.3
 joi avg: 1369.9
 ✨  Done in 25.85s.
+```
+
+### Tested on MacBook Pro (Intel Core i7, 2018, 2.2 GHz 6-Core)
+
+- **class-validator + class-transformer**: takes on avg 2668.6
+- **Joi validation**: takes on avg 3055.2
+
+```
+$ yarn benchmark
+yarn run v1.22.10
+$ ts-node ./src/benchmark.ts
+class-validator avg: 2668.6
+joi avg: 3055.2
+✨  Done in 59.22s.
 ```
 
 ## Conclusion
