@@ -47,6 +47,20 @@ joi avg: 3055.2
 ✨  Done in 59.22s.
 ```
 
+### Tested HP Elitebook Folio 1040 G3, Intel Core i7 6500U, 2016, 2.5 GHz, 2 cores
+
+- **class-validator + class-transformer**: takes on avg 2992.9
+- **Joi validation**: takes on avg 3515.2
+
+```
+$ yarn benchmark
+yarn run v1.22.5
+$ ts-node ./src/benchmark.ts
+class-validator avg: 2992.9
+joi avg: 3515.2
+Done in 67.47s.
+```
+
 ## Conclusion
 
 **class-validator + class-transformer** is clearly the fastest option.
