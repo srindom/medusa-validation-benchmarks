@@ -9,8 +9,8 @@
   "dependencies": {
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
+    "joi": "^17.4.2",
     "lodash": "^4.17.21",
-    "medusa-core-utils": "^1.1.26",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {

@@ -6,24 +6,24 @@ We are considering moving away from Joi for validation of request bodies on our 
 
 ## Input
 
-10000 dummy request payloads for Order Filters have been generated. The project runs validation on all of them in sequence using Joi's `validate` function and class-validator's `validateSync` function.
+100000 dummy request payloads for Order Filters have been generated. The project runs validation on all of them in sequence using Joi's `validate` function and class-validator's `validateSync` function.
+
+The timing was performed over 10 runs and the results show the average time for a run.
 
 ## Result
 
-- **class-validator + class-transformer**: completes in 1199 ms
-- **Joi validation**: completes in 23983 ms
+Tested on a MacBook Air (M1, 2020)
+
+- **class-validator + class-transformer**: takes on avg 1115.3
+- **Joi validation**: takes on avg 1369.9
 
 ```
 $ yarn benchmark
 yarn run v1.22.11
 $ ts-node ./src/benchmark.ts
-class-validator starting 1635930064900
-class-validator ended 1635930066099
-Delta 1199
-Joi Validation starting 1635930066099
-Joi validation ended 1635930090082
-Delta 23983
-✨  Done in 25.95s.
+class-validator avg: 1115.3
+joi avg: 1369.9
+✨  Done in 25.85s.
 ```
 
 ## Conclusion
